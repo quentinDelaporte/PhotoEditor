@@ -1,0 +1,84 @@
+<div class="header">
+  <div class="buttons-bar-1">
+    <button class="btn">Fichier</button>
+    <button class="btn">Edition</button>
+    <button class="btn">Image</button>
+    <button class="btn">Calque</button>
+    <button class="btn">Selection</button>
+    <button class="btn">Filtre</button>
+    <button class="btn">Affichage</button>
+    <button class="btn">Plus</button>
+  </div>
+</div>
+<div class="aside aside-left">
+  <div class="icons">
+    <fa-icon
+      [icon]="pointerIcon"
+      class="icon"
+      (click)="setTool('pointer')"
+    ></fa-icon>
+    <fa-icon
+      [icon]="selectIcon"
+      class="icon"
+      (click)="setTool('select')"
+    ></fa-icon>
+    <fa-icon
+      [icon]="pencilIcon"
+      class="icon"
+      (click)="setTool('pencil')"
+    ></fa-icon>
+    <fa-icon
+      [icon]="eraserIcon"
+      class="icon"
+      (click)="setTool('eraser')"
+    ></fa-icon>
+    <fa-icon
+      [icon]="brushIcon"
+      class="icon"
+      (click)="setTool('brush')"
+    ></fa-icon>
+    <fa-icon
+      [icon]="squareIcon"
+      class="icon"
+      (click)="setTool('square')"
+    ></fa-icon
+    ><fa-icon
+      [icon]="fillIcon"
+      class="icon"
+      (click)="setTool('fill')"
+    ></fa-icon>
+    <fa-icon [icon]="wandIcon" class="icon" (click)="setTool('wand')"></fa-icon>
+    <fa-icon
+      [icon]="zoomInIcon"
+      class="icon"
+      (click)="setTool('zoomIn')"
+    ></fa-icon>
+    <fa-icon
+      [icon]="zoomOutIcon"
+      class="icon"
+      (click)="setTool('zoomOut')"
+    ></fa-icon
+    ><fa-icon
+      [icon]="paletteIcon"
+      class="icon"
+      (click)="setTool('palette')"
+    ></fa-icon>
+  </div>
+</div>
+<div class="main">
+  <canvas
+    class="canvas"
+    id="canvas"
+    (mousedown)="drawstart($event)"
+    (mouseup)="drawend($event)"
+    (mousemove)="drawmove($event)"
+    (mouseleave)="drawend($event)"
+    (touchstart)="touchstart($event)"
+    (touchmove)="touchmove($event)"
+    (touchend)="touchend($event)"
+    (click)="act($event)"
+  ></canvas>
+</div>
+
+<div class="aside aside-right"></div>
+<div class="status-bar"></div>

@@ -1,0 +1,233 @@
+$header-width: 100vw;
+$header-height: 60px;
+$aside-left-width: 30px;
+$aside-right-width: 200px;
+$aside-height: calc(100vh - 60px);
+$header-color: #4d4d4d;
+$btn-hover-color: #3a3a3a;
+$main-background-color: #6d6d6d;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* My styles */
+body {
+  background-color: #fafbfd;
+  overflow: hidden;
+}
+
+table {
+  thead {
+    background-color: white;
+    position: sticky;
+    border-bottom: 1px solid #ddd;
+    top: -1px;
+  }
+}
+
+.input,
+.multiselect-dropdown {
+  width: 250px !important;
+  border: 1px solid #ddd !important;
+  .dropdown-btn .selected-item-container .selected-item {
+    background-color: $header-color !important;
+  }
+}
+.dropdown-list {
+  position: fixed !important;
+  width: 300px !important;
+}
+.multiselect-dropdown {
+  .selected-item {
+    font-size: 14px;
+  }
+}
+.btn {
+  width: auto;
+  color: #fff;
+  background-color: $header-color;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  &:hover {
+    background-color: $btn-hover-color;
+  }
+}
+
+.requiered-field::after {
+  content: "*";
+  color: #9c0000;
+}
+
+.errored-input {
+  & > .multiselect-dropdown {
+    border: 1px solid #9c0000 !important;
+  }
+  &:not(ng-multiselect-dropdown) {
+    border: 1px solid #9c0000 !important;
+  }
+}
+
+.trashBtn {
+  background-color: #9c0000;
+}
+.recoveryBtn {
+  background-color: #009945;
+}
+.editBtn {
+  background-color: #009945;
+}
+hr.separator {
+  width: 90%;
+  margin-left: 5%;
+  color: #ddd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
